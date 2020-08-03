@@ -28,11 +28,14 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # Devise gem for user authentication
 gem "devise_token_auth"
 
+# Faker for seeding database
+gem 'faker'
+
 group :development, :test do
   # 'binding.pry' for debugging
   gem 'pry'
   # Faker for seeding database
-  gem "faker", :git => "https://github.com/stympy/faker.git", :branch => "master"
+gem 'faker'
 end
 
 group :development do
