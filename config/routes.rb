@@ -5,5 +5,6 @@ Rails.application.routes.draw do
     resources :cats, only: [:index, :update, :destroy]
     get 'my_cats', to: 'cats#my_cats'
   end
-
+  
+  get '*other', to: 'static#index'
 end
