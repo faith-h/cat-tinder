@@ -51,7 +51,6 @@ class Login extends React.Component {
             </div>
           </form>
         </div>
-        <p> Get started by logging in with email: test@test.com and password: password </p>
       </>
     )
   }

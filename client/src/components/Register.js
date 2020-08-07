@@ -66,7 +66,6 @@ class Register extends React.Component {
             </div>
           </form>
         </div>
-        <p> As this project is a demo, please use a fake username and password </p>
       </>
     )
   }
