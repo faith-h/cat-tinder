@@ -2,7 +2,7 @@ import React from 'react'
 import { AuthConsumer } from '../providers/AuthProvider'
 
 class Login extends React.Component {
-  state = { email: '', password: '' }
+  state = { email: 'test@test.com', password: 'password' }
 
   handleSubmit = (e) => {
     e.preventDefault();
@@ -27,19 +27,18 @@ class Login extends React.Component {
           <h1 class='header'> Login </h1>
           <form onSubmit={this.handleSubmit}>
             <input
+              required
               class='form'
               label="Email"
-              autoFocus
-              required
               name='email'
               value={email}
               placeholder='Email'
               onChange={this.handleChange}
             />
             <input
+              required
               class='form'
               label="Password"
-              required
               name='password'
               value={password}
               placeholder='Password'
@@ -47,7 +46,7 @@ class Login extends React.Component {
               onChange={this.handleChange}
             />
             <div style={{ textAlign: 'center' }}>
-              <button class='submitButton' type='submit'> Submit </button>
+              <button class='submitButton' type='submit'> Click here to demo! </button>
             </div>
           </form>
         </div>
