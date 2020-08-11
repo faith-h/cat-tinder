@@ -5,8 +5,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(0deg, rgba(252, 10, 113, 1) 15%, rgba(251, 61, 97, 1) 30%, rgba(251, 92, 84, 1) 91%);
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  min-width: 100%;
   text-align: center;
   color: white;
 }
@@ -19,7 +19,7 @@ code {
 
 .nav {
   background: black;
-  width: 100vw;
+  width: 100%;
   height: 5rem;
   display: flex;
   justify-content: flex-end;
@@ -28,8 +28,19 @@ code {
 }
 
 .logo {
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 3rem;
   filter: invert(1);
+  padding: 1rem;
+}
+
+.logo:hover {
+  padding: 1rem;
+  background: white;
+  transition: 300ms ease;
+  filter: invert(0);
 }
 
 .nav-link:first-child {
@@ -76,13 +87,14 @@ code {
 
 @media screen and (max-width: 600px) {
   .navresponsive {
+    padding-top: 1rem;
     background: black;
     position: relative;
-    height: 17.1rem;
+    height: 13.9rem;
     transition: height 200ms ease;
+    overflow: hidden;
   }
   .navresponsive a {
-    float: none;
     display: block;
     text-align: left;
   }
@@ -134,8 +146,9 @@ code {
 
 /* Home page styling */
 
-.catBox {
+.catBox, .catBoxOut {
   margin-top: 5rem;
+  margin-bottom: 5rem;
   display: inline-block;
   text-align: center;
   height: 35rem;
@@ -145,9 +158,34 @@ code {
   border-radius: 3px;
 }
 
+.catBoxOut {
+  animation: 1s slideOut;
+}
+
+@keyframes slideOut {
+  0% {
+    margin-left: 0%;
+    opacity: 1;
+  }
+  25% {
+    margin-left: 100%;
+    opacity: 0;
+  }
+  50% {
+    margin-left: 0%;
+    margin-right: 100%;
+    opacity: 0;
+  }
+  100% {
+    margin-right: 0%;
+    opacity: 1;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .catBox {
     margin-top: 3rem;
+    margin-bottom: 3rem;
     width: 25rem;
   }
 }
@@ -164,7 +202,7 @@ code {
   padding: 0;
   text-transform: uppercase;
   font-size: 1.5rem;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
 }
 
 .button {
@@ -178,8 +216,8 @@ code {
 }
 
 .button:hover {
-  background: gainsboro;
-  transition: 0.3s;
+  background: #eee;
+  transition: 300ms ease;
 }
 
 /* Cat page styling */

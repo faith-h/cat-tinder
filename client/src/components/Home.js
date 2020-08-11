@@ -24,12 +24,31 @@ class Home extends React.Component {
   downvote = (id) => {
     const { cats, } = this.state
     this.setState({ cats: cats.filter(c => c.id !== id), })
+    this.slideCard()
   }
 
   upvote = (id) => {
     const { cats } = this.state
     axios.put(`/api/cats/${id}`)
       .then(() => this.setState({ cats: cats.filter(c => c.id !== id), }))
+    this.slideCard()
+  }
+
+  slideCard = () => {
+    var x = document.getElementById('card')
+    if (x.className === 'catBox') {
+      x.className += 'Out'
+      setTimeout(this.reset, 1000)
+    } else {
+      x.className = 'catBox'
+    }
+  }
+
+  reset = () => {
+    var x = document.getElementById('card')
+    if (this.state.cats.length !== 0) {
+      x.className = 'catBox'
+    }
   }
 
   render() {
@@ -37,11 +56,11 @@ class Home extends React.Component {
     if (cat) {
       return (
         <>
-          <div class='catBox'>
+          <div id='card' class='catBox'>
             <div key={cat.id}>
               <div class='cat-img' style={{ background: `url(${cat.avatar}) no-repeat center` }} />
               <p>
-                <h2 class='name'> {cat.name} </h2>
+                <p class='name'> {cat.name} </p>
                 <p> Breed: {cat.breed} </p>
                 <p> Registry: {cat.registry} </p>
                 <button
