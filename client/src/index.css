@@ -205,7 +205,7 @@ code {
   .catBox {
     margin-top: 3rem;
     margin-bottom: 3rem;
-    width: 25rem;
+    max-width: 80vw;
   }
 }
 
