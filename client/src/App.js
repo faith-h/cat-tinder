@@ -18,7 +18,7 @@ const App = () => (
         <ProtectedRoute exact path='/my_cats' component={MyCats} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
-        <Route component={NoMatch} />
+        <ProtectedRoute component={NoMatch} />
       </Switch>
     </FetchUser>
   </>

@@ -25,8 +25,8 @@ class Register extends React.Component {
 
     return (
       <>
-        <div style={{ display: 'flex', width: '100%', alignItems: 'center', justifyContent: 'center' }}>
-          <img class='logo' alt='cat logo' style={{ height: '4rem', filter: 'invert(1)' }} src='https://image.flaticon.com/icons/svg/57/57162.svg' /> <h1 style={{ fontSize: '4rem' }}>  tinder </h1>
+      <div style={{ display: 'flex', width: '100%', alignItems: 'center', justifyContent: 'center' }}>
+          <img alt='cat logo' style={{ height: '4rem', filter: 'invert(1)' }} src='https://image.flaticon.com/icons/svg/57/57162.svg' /> <h1 style={{ fontSize: '4rem' }}> tinder </h1>
         </div>
         <div class='loginBox'>
           <h1 class='header'> Register </h1>

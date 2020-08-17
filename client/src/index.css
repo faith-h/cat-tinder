@@ -37,14 +37,9 @@ code {
 }
 
 .logo:hover {
-  padding: 1rem;
   background: white;
   transition: 300ms ease;
   filter: invert(0);
-}
-
-.nav-link:first-child {
-  margin-right: auto;
 }
 
 .nav-link {
@@ -53,14 +48,13 @@ code {
   text-transform: uppercase;
   letter-spacing: 4px;
   text-decoration: none;
-  font-size: 1rem;
   cursor: pointer;
 }
 
 .nav-link:not(:first-of-type):hover {
   background-color: white;
   color: black;
-  transition: 400ms ease;
+  transition: 300ms ease;
 }
 
 .icon {
@@ -68,9 +62,11 @@ code {
 }
 
 @media screen and (max-width: 600px) {
+
   .nav .nav-link:not(:first-child) {
     display: none;
   }
+
   .icon {
     height: 2rem;
     width: 2rem;
@@ -81,23 +77,21 @@ code {
     top: 1.25rem;
     color: white;
     cursor: pointer;
-    font-weight: lighter;
   }
-}
-
-@media screen and (max-width: 600px) {
+  
   .navresponsive {
     padding-top: 1rem;
     background: black;
-    position: relative;
     height: 13.9rem;
     transition: height 200ms ease;
     overflow: hidden;
   }
+
   .navresponsive a {
     display: block;
     text-align: left;
   }
+
 }
 
 /* Login/Register styling */
@@ -141,7 +135,14 @@ code {
 
 .submitButton:hover {
   background: #fc0a71;
-  transition: 500ms ease;
+  transition: 300ms ease;
+}
+
+@media screen and (max-width: 600px) {
+  .submitButton {
+    height: 4rem;
+    width: 8rem;
+  }
 }
 
 /* Home page styling */
@@ -239,7 +240,7 @@ code {
   transition: 300ms ease;
 }
 
-/* Cat page styling */
+/* My cats page styling */
 
 .grid {
   display: grid;

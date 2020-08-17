@@ -59,31 +59,29 @@ class Home extends React.Component {
           <div id='card' class='catBox'>
             <div key={cat.id}>
               <div class='cat-img' style={{ background: `url(${cat.avatar}) no-repeat center` }} />
-              <p>
-                <p class='name'> {cat.name} </p>
-                <p> Breed: {cat.breed} </p>
-                <p> Registry: {cat.registry} </p>
-                <button
-                  class='button'
-                  style={{ color: '#2196f3' }}
-                  onClick={() => this.downvote(cat.id)}
-                >
-                  <FontAwesomeIcon icon={faHeartBroken} />
-                </button>
-                <button
-                  class='button'
-                  style={{ color: '#fb3d61' }}
-                  onClick={() => this.upvote(cat.id)}
-                >
-                  <FontAwesomeIcon icon={faHeart} />
-                </button>
-              </p>
+              <span class='name'> {cat.name} </span>
+              <p> Breed: {cat.breed} </p>
+              <p> Registry: {cat.registry} </p>
+              <button
+                class='button'
+                style={{ color: '#2196f3' }}
+                onClick={() => this.downvote(cat.id)}
+              >
+                <FontAwesomeIcon icon={faHeartBroken} />
+              </button>
+              <button
+                class='button'
+                style={{ color: '#fb3d61' }}
+                onClick={() => this.upvote(cat.id)}
+              >
+                <FontAwesomeIcon icon={faHeart} />
+              </button>
             </div>
           </div>
         </>
       )
     } else {
-      return <div class='fill-page'> <h1> No more cats are available. Please check back later. </h1> </div>
+      return <h1> No more cats are available. Please check back later. </h1>
     }
   }
 }
